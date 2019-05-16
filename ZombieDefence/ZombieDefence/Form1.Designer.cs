@@ -32,22 +32,18 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.scoretext = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.player = new System.Windows.Forms.PictureBox();
-            this.enemy2 = new System.Windows.Forms.PictureBox();
-            this.enemy3 = new System.Windows.Forms.PictureBox();
-            this.bullet = new System.Windows.Forms.PictureBox();
-            this.enemy1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bullet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 3;
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // scoretext
@@ -56,12 +52,11 @@
             this.scoretext.BackColor = System.Drawing.Color.Transparent;
             this.scoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.scoretext.ForeColor = System.Drawing.Color.Red;
-            this.scoretext.Location = new System.Drawing.Point(33, 9);
+            this.scoretext.Location = new System.Drawing.Point(21, 18);
             this.scoretext.Name = "scoretext";
             this.scoretext.Size = new System.Drawing.Size(36, 39);
             this.scoretext.TabIndex = 5;
             this.scoretext.Text = "0";
-            this.scoretext.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer2
             // 
@@ -69,93 +64,66 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // player
+            // panel1
             // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::ZombieDefence.Properties.Resources.upper;
-            this.player.Location = new System.Drawing.Point(279, 591);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(100, 108);
-            this.player.TabIndex = 4;
-            this.player.TabStop = false;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.scoretext);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1012, 634);
+            this.panel1.TabIndex = 6;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseClick);
             // 
-            // enemy2
+            // pictureBox1
             // 
-            this.enemy2.BackColor = System.Drawing.Color.Transparent;
-            this.enemy2.Image = global::ZombieDefence.Properties.Resources.zdown;
-            this.enemy2.Location = new System.Drawing.Point(279, 60);
-            this.enemy2.Name = "enemy2";
-            this.enemy2.Size = new System.Drawing.Size(71, 68);
-            this.enemy2.TabIndex = 3;
-            this.enemy2.TabStop = false;
+            this.pictureBox1.Image = global::ZombieDefence.Properties.Resources.closegame;
+            this.pictureBox1.Location = new System.Drawing.Point(962, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 26);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // enemy3
+            // timer3
             // 
-            this.enemy3.BackColor = System.Drawing.Color.Transparent;
-            this.enemy3.Image = global::ZombieDefence.Properties.Resources.zdown;
-            this.enemy3.Location = new System.Drawing.Point(532, 60);
-            this.enemy3.Name = "enemy3";
-            this.enemy3.Size = new System.Drawing.Size(74, 68);
-            this.enemy3.TabIndex = 2;
-            this.enemy3.TabStop = false;
+            this.timer3.Interval = 10;
+            this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
             // 
-            // bullet
+            // timer4
             // 
-            this.bullet.BackColor = System.Drawing.Color.Transparent;
-            this.bullet.Image = global::ZombieDefence.Properties.Resources.bullet;
-            this.bullet.Location = new System.Drawing.Point(301, 416);
-            this.bullet.Name = "bullet";
-            this.bullet.Size = new System.Drawing.Size(30, 34);
-            this.bullet.TabIndex = 1;
-            this.bullet.TabStop = false;
-            // 
-            // enemy1
-            // 
-            this.enemy1.BackColor = System.Drawing.Color.Transparent;
-            this.enemy1.Image = global::ZombieDefence.Properties.Resources.zdown;
-            this.enemy1.Location = new System.Drawing.Point(40, 60);
-            this.enemy1.Name = "enemy1";
-            this.enemy1.Size = new System.Drawing.Size(71, 68);
-            this.enemy1.TabIndex = 0;
-            this.enemy1.TabStop = false;
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InfoText;
-            this.ClientSize = new System.Drawing.Size(684, 711);
-            this.Controls.Add(this.scoretext);
-            this.Controls.Add(this.player);
-            this.Controls.Add(this.enemy2);
-            this.Controls.Add(this.enemy3);
-            this.Controls.Add(this.bullet);
-            this.Controls.Add(this.enemy1);
+            this.ClientSize = new System.Drawing.Size(1012, 634);
+            this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bullet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox enemy1;
-        private System.Windows.Forms.PictureBox bullet;
-        private System.Windows.Forms.PictureBox enemy3;
-        private System.Windows.Forms.PictureBox enemy2;
-        private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Label scoretext;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
     }
 }
 

@@ -16,10 +16,7 @@ namespace ZombieDefence
     {
         public Form2()
         {
-            System.Windows.Media.MediaPlayer backgroundMusic;
-            backgroundMusic = new System.Windows.Media.MediaPlayer();
-            backgroundMusic.Open(new Uri(Directory.GetCurrentDirectory() + "\\startMIs.wav"));
-            backgroundMusic.Play();
+            PlayMusic(1);
             InitializeComponent();
         }
 
@@ -32,6 +29,7 @@ namespace ZombieDefence
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
+            PlayMusic(0);
             //this.Hide();
             form.Show();
         }
@@ -46,8 +44,34 @@ namespace ZombieDefence
             if (e.KeyCode == Keys.Enter)
             {
                 Form1 form = new Form1();
+                PlayMusic(0);
                 //this.Hide();
                 form.Show();
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                PlayMusic(0);
+                this.Close();
+            }
+        }
+
+        private void PlayMusic(int a)
+        {
+            if (a == 1)
+            {
+                SoundPlayer sndPlayer = new SoundPlayer(Directory.GetCurrentDirectory() + @"\startMIs.wav");
+                sndPlayer.Play();
+                /*System.Windows.Media.MediaPlayer background;
+                background = new System.Windows.Media.MediaPlayer();
+                background.Open(new Uri(Directory.GetCurrentDirectory() + "\\startMIs.wav"));
+                background.Play();*/
+            }
+            if (a == 0)
+            {
+                SoundPlayer sndPlayer = new SoundPlayer(Directory.GetCurrentDirectory() + @"\die.wav");
+                sndPlayer.Play();
+                /*background.Stop();
+                background.Close();*/
             }
         }
     }

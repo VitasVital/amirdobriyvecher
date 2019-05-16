@@ -20,3 +20,14 @@ C:\Users\vital\Downloads\Algorithms-DS-master\ZombieDefence\ZombieDefence\obj\De
 C:\Users\vital\Downloads\Algorithms-DS-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.csproj.CoreCompileInputs.cache
 C:\Users\vital\Downloads\Algorithms-DS-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.exe
 C:\Users\vital\Downloads\Algorithms-DS-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.pdb
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\bin\Debug\ZombieDefence.exe.config
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\bin\Debug\ZombieDefence.exe
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\bin\Debug\ZombieDefence.pdb
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.csprojAssemblyReference.cache
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.Form1.resources
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.Form2.resources
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.Properties.Resources.resources
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.csproj.GenerateResource.cache
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.csproj.CoreCompileInputs.cache
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.exe
+C:\Users\vital\Downloads\amirdobriyvecher-master\ZombieDefence\ZombieDefence\obj\Debug\ZombieDefence.pdb
