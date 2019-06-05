@@ -96,7 +96,7 @@ namespace ZombieDefence
         private void timer2_Tick(object sender, EventArgs e)
         {
             gr.DrawImage(back, 0, 0);
-
+            //gr.DrawImage(player.player, player.position);
         }
 
 

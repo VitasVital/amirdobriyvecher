@@ -42,7 +42,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 80;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
@@ -79,7 +79,7 @@
             // timer4
             // 
             this.timer4.Enabled = true;
-            this.timer4.Interval = 10;
+            this.timer4.Interval = 80;
             this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
             // 
             // Form1
