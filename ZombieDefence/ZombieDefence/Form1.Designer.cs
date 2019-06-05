@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.scoretext = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,31 +42,18 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // scoretext
-            // 
-            this.scoretext.AutoSize = true;
-            this.scoretext.BackColor = System.Drawing.Color.Transparent;
-            this.scoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoretext.ForeColor = System.Drawing.Color.Red;
-            this.scoretext.Location = new System.Drawing.Point(21, 18);
-            this.scoretext.Name = "scoretext";
-            this.scoretext.Size = new System.Drawing.Size(36, 39);
-            this.scoretext.TabIndex = 5;
-            this.scoretext.Text = "0";
             // 
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 80;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.scoretext);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -109,7 +95,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -118,7 +103,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label scoretext;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -44,18 +44,18 @@ namespace ZombieDefence
         }
 
 
-        int v = 1;
+        int v = 3;
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Right)
             {
                 player.player = Image.FromFile(Directory.GetCurrentDirectory() + @"\player.png");
-                v = 1;
+                v = 3;
             }
             if (e.KeyCode == Keys.Left)
             {
                 player.player = Image.FromFile(Directory.GetCurrentDirectory() + @"\player.png");
-                v = 1;
+                v = 3;
             }
         }
 
@@ -88,14 +88,14 @@ namespace ZombieDefence
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            gr.DrawImage(back, 0, 0);
+            //gr.DrawImage(back, 0, 0);
             gr.DrawImage(player.player, player.position);
             gr.DrawImage(shot.shot, shot.position);
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            score +=1;
+            gr.DrawImage(back, 0, 0);
 
         }
 
