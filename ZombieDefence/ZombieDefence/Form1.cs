@@ -41,6 +41,10 @@ namespace ZombieDefence
             zombie2.position = new Point(300, -100);
             zombie3.position = new Point(500, -100);
             shot.position = new Point(-100, -100);
+
+            typeof(Panel).InvokeMember("DoubleBuffered",
+            BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+            null, panel1, new object[] { true });
         }
 
 
@@ -86,18 +90,21 @@ namespace ZombieDefence
             }
         }
 
+
+        int delta = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
             //gr.DrawImage(back, 0, 0);
-            gr.DrawImage(player.player, player.position);
-            gr.DrawImage(shot.shot, shot.position);
+            //gr.DrawImage(player.player, player.position);
+            //gr.DrawImage(shot.shot, shot.position);
+            delta += timer1.Interval;
+            if (delta > 60)
+            {
+                panel1.Refresh();
+                delta = 0;
+            }
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            gr.DrawImage(back, 0, 0);
-            //gr.DrawImage(player.player, player.position);
-        }
 
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -194,14 +201,14 @@ namespace ZombieDefence
                 vistrel = false;
                 timer3.Enabled = false;
             }
-            if (zombie1.alive == true)
+            /*if (zombie1.alive == true)
             {
                 gr.DrawImage(zombie1.zombie, zombie1.position);
-            }
+            }*/
             if (zombie1.alive == false)
             {
                 timeZ1++;
-                gr.DrawImage(zombie1.died, zombie1.position);
+                //gr.DrawImage(zombie1.died, zombie1.position);
                 if (timeZ1 == 20)
                 {
                     timeZ1 = 0;
@@ -256,14 +263,14 @@ namespace ZombieDefence
                 vistrel = false;
                 timer3.Enabled = false;
             }
-            if (zombie2.alive == true)
+            /*if (zombie2.alive == true)
             {
                 gr.DrawImage(zombie2.zombie, zombie2.position);
-            }
+            }*/
             if (zombie2.alive == false)
             {
                 timeZ2++;
-                gr.DrawImage(zombie2.died, zombie2.position);
+                //gr.DrawImage(zombie2.died, zombie2.position);
                 if (timeZ1 == 20)
                 {
                     timeZ2 = 0;
@@ -318,14 +325,14 @@ namespace ZombieDefence
                 vistrel = false;
                 timer3.Enabled = false;
             }
-            if (zombie3.alive == true)
+            /*if (zombie3.alive == true)
             {
                 gr.DrawImage(zombie3.zombie, zombie3.position);
-            }
+            }*/
             if (zombie3.alive == false)
             {
                 timeZ3++;
-                gr.DrawImage(zombie3.died, zombie3.position);
+                //gr.DrawImage(zombie3.died, zombie3.position);
                 if (timeZ3 == 20)
                 {
                     timeZ3 = 0;
@@ -351,6 +358,38 @@ namespace ZombieDefence
         {
             startshoot = true;
             timer3.Enabled = true;
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(back, 0, 0);
+            e.Graphics.DrawImage(player.player, player.position);
+            e.Graphics.DrawImage(shot.shot, shot.position);
+
+            if (zombie1.alive == true)
+            {
+                e.Graphics.DrawImage(zombie1.zombie, zombie1.position);
+            }
+            if (zombie1.alive == false)
+            {
+                e.Graphics.DrawImage(zombie1.died, zombie1.position);
+            }
+            if (zombie2.alive == true)
+            {
+                e.Graphics.DrawImage(zombie2.zombie, zombie2.position);
+            }
+            if (zombie2.alive == false)
+            {
+                e.Graphics.DrawImage(zombie2.died, zombie2.position);
+            }
+            if (zombie3.alive == true)
+            {
+                e.Graphics.DrawImage(zombie3.zombie, zombie3.position);
+            }
+            if (zombie3.alive == false)
+            {
+                e.Graphics.DrawImage(zombie3.died, zombie3.position);
+            }
         }
     }
 

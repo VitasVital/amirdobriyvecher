@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -42,14 +41,8 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 80;
+            this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 80;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // panel1
             // 
@@ -59,6 +52,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1012, 634);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseClick);
             // 
             // pictureBox1
@@ -103,7 +97,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer3;
