@@ -1,0 +1,9 @@
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\bin\Debug\AmirTerrorist.exe.config
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\bin\Debug\AmirTerrorist.exe
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\bin\Debug\AmirTerrorist.pdb
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.csprojAssemblyReference.cache
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.Form1.resources
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.Properties.Resources.resources
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.csproj.GenerateResource.cache
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.exe
+C:\Users\vital\Desktop\C#\amirdobriyvecher\AmirTerrorist\AmirTerrorist\obj\Debug\AmirTerrorist.pdb
