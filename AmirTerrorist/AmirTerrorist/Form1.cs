@@ -41,18 +41,22 @@ namespace AmirTerrorist
         private void shoot()
         {
             bullet.position = terrorist.position;
-            while (bullet.position.Y > 0)
+            bullet.position.X = terrorist.position.X + 50;
+            while (bullet.position.Y > -20)
             {
-                bullet.position.Y = -1;
-                Thread.Sleep(100);
+                bullet.position.Y -= 1;
+                Thread.Sleep(5);
             }
             bullet.position.Y = -100;
             bullet.position.X = -100;
         }
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Thread shooting = new Thread(new ThreadStart(shoot));
-            shooting.Start();
+            if (bullet.position.X == -100 && bullet.position.Y == -100)
+            {
+                Thread shooting = new Thread(new ThreadStart(shoot));
+                shooting.Start();
+            }
         }
         public class Bullet
         {
@@ -86,8 +90,13 @@ namespace AmirTerrorist
             //    delta = 0;
             //}
             gr.DrawImage(terrorist.terrorist, terrorist.position);
-            gr.DrawImage(back, 0, 0);
+            
             gr.DrawImage(bullet.bullet, bullet.position);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            gr.DrawImage(back, 0, 0);
         }
     }
 }
